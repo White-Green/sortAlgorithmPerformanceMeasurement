@@ -1,10 +1,17 @@
 #include <iostream>
+#if USE_MERGE_SORT_SPACE
 #include "algorithms/merge_sort_space.cpp"
-// #include "algorithms/merge_sort_noSpace.cpp"
-// #include "algorithms/quick_sort.cpp"
-// #include "algorithms/bubble_sort.cpp"
-// #include "algorithms/select_sort.cpp"
-// #include "algorithms/insert_sort.cpp"
+#elif USE_MERGE_SORT_NO_SPACE
+#include "algorithms/merge_sort_noSpace.cpp"
+#elif USE_QUICK_SORT
+#include "algorithms/quick_sort.cpp"
+#elif USE_BUBBLE_SORT
+#include "algorithms/bubble_sort.cpp"
+#elif USE_SELECT_SORT
+#include "algorithms/select_sort.cpp"
+#elif USE_INSERT_SORT
+#include "algorithms/insert_sort.cpp"
+#endif
 
 using namespace std;
 int main(int argc, char **argv)
@@ -18,7 +25,6 @@ int main(int argc, char **argv)
     if (argc >= 2 && *argv[1] != '1')
         for (int i = 0; i < n; i++)
             cout << input[i] << endl;
-    cout << "end" << endl;
     delete[] input;
     delete[] work;
 }

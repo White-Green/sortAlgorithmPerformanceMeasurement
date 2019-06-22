@@ -1,1 +1,1 @@
-perf stat -e task-clock -e page-faults -e cycles -e instructions -e branches -e branch-misses -e cache-references -e cache-misses -e L1-dcache-loads -e L1-dcache-load-misses -e L1-dcache-stores -e L1-dcache-store-misses -e L1-icache-loads -e L1-icache-load-misses $1
+perf stat -e task-clock -e page-faults -e cycles -e instructions -e branches -e branch-misses -e cache-references -e cache-misses -e L1-dcache-loads -e L1-dcache-load-misses -e L1-dcache-stores -e L1-dcache-store-misses -e L1-icache-loads -e L1-icache-load-misses -x, $1
