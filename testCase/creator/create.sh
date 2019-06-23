@@ -5,6 +5,6 @@ for ((i = 0; value <= 10000000; i++)); do
     for ((r = 0; r < 8; r++)); do
         ./createRandomData $value >./../rnd_$i\_$r.txt &
     done
-    value=$((value * 10))
+    value=$((value * 2))
     echo $i
 done
