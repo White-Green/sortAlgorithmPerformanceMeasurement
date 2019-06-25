@@ -2,13 +2,13 @@ void sort(int *input, int *work, int begin, int end)
 {
     for (int i = begin; i < end - 1; i++)
     {
-        for (int r = i + 1; r < end; r++)
+        for (int r = end - 1; r > i; r--)
         {
-            if (input[i] < input[r])
+            if (input[r - 1] < input[r])
             {
-                int tmp = input[i];
-                input[i] = input[r];
-                input[r] = tmp;
+                int tmp = input[r];
+                input[r] = input[r - 1];
+                input[r - 1] = tmp;
             }
         }
     }
