@@ -1,6 +1,6 @@
 void sort(int *input, int *work, int begin, int end)
 {
-    for (int i = begin; i < end; i++)
+    for (int i = begin; i < end - 1; i++)
     {
         int max = input[i];
         int maxIndex = i;
